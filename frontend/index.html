@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic AI eBook Chatbot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Agentic AI eBook Chatbot</h1>
+      <p>Answers are grounded only in the <em>Agentic AI</em> eBook.</p>
+    </header>
+
+    <form id="chat-form" class="ask">
+      <input
+        id="question"
+        type="text"
+        placeholder="e.g. What is an AI agent?"
+        autocomplete="off"
+        required
+      />
+      <button id="ask-btn" type="submit">Ask</button>
+    </form>
+
+    <section id="result" class="result hidden">
+      <div class="answer-head">
+        <h2>Answer</h2>
+        <span id="confidence" class="badge"></span>
+      </div>
+      <p id="answer" class="answer"></p>
+
+      <details id="sources" class="sources">
+        <summary>Retrieved context chunks</summary>
+        <div id="chunks"></div>
+      </details>
+    </section>
+
+    <p id="status" class="status"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

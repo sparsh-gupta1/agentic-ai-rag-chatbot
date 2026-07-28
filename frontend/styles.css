@@ -1,0 +1,164 @@
+:root {
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --text: #1e2430;
+  --muted: #6b7280;
+  --border: #e3e6ea;
+  --accent: #3b56e0;
+  --accent-soft: #eef1fd;
+  --good: #1a8a54;
+  --warn: #b26a00;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 1.7rem;
+}
+
+.header p {
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+.ask {
+  display: flex;
+  gap: 10px;
+}
+
+#question {
+  flex: 1;
+  padding: 13px 15px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  outline: none;
+}
+
+#question:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+#ask-btn {
+  padding: 0 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#ask-btn:hover { filter: brightness(1.05); }
+#ask-btn:disabled { opacity: 0.6; cursor: default; }
+
+.result {
+  margin-top: 26px;
+  padding: 22px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.hidden { display: none; }
+
+.answer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.answer-head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.badge.low { background: #fdf1e3; color: var(--warn); }
+
+.answer {
+  margin: 0 0 16px;
+  white-space: pre-wrap;
+}
+
+.sources summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--muted);
+  user-select: none;
+}
+
+.chunk {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.chunk-meta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.chunk-text {
+  font-size: 0.9rem;
+  color: #374151;
+  margin: 0;
+}
+
+.status {
+  margin-top: 18px;
+  color: var(--muted);
+  min-height: 1.2em;
+}
+
+.status.error { color: #c0392b; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c;
+    --card: #1c2029;
+    --text: #e7eaef;
+    --muted: #9aa3b2;
+    --border: #2b313c;
+    --accent: #6d86ff;
+    --accent-soft: #232a44;
+    --good: #4ecb8b;
+    --warn: #e0a458;
+  }
+  .chunk-text { color: #c4cad4; }
+}

@@ -1,0 +1,9 @@
+openai>=1.30
+chromadb>=0.5
+langgraph>=0.2
+pypdf>=4.2
+python-dotenv>=1.0
+requests>=2.31
+fastapi>=0.111
+uvicorn>=0.30
+pytest>=8.0

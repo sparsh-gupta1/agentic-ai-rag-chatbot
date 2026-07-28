@@ -1,0 +1,3 @@
+# Root requirements so the platform (Railway/Nixpacks) detects a Python app
+# and installs the backend dependencies.
+-r backend/requirements.txt
